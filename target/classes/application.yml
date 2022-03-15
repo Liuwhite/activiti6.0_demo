@@ -1,0 +1,20 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ruoyi_demo?useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  activiti:
+#  生产环境要去掉
+    database-schema-update: false
+    check-process-definitions: false
+    process-definition-location-prefix: classpath:/processes/
+    history-level: full
+  thymeleaf:
+    mode: LEGACYHTML5
+
+logging:
+  config: classpath:logback-spring.xml
